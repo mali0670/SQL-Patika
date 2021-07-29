@@ -1,5 +1,5 @@
 # ÖDEV 1
-
+##
 <ol>
 
 <h3>
@@ -11,7 +11,7 @@ Film tablosunda bulunan title ve description sütunlarındaki verileri sıralay�
 </h3>
 </li><br><br>
 
-
+##
 <h3>
 <li>
 Film tablosunda bulunan tüm sütunlardaki verileri film uzunluğu (length) 60 dan büyük VE 75 ten küçük olma koşullarıyla sıralayınız.
@@ -21,7 +21,7 @@ Film tablosunda bulunan tüm sütunlardaki verileri film uzunluğu (length) 60 d
 </h3>
 </li><br><br>
 
-
+##
 <h3>
 <li>
 Film tablosunda bulunan tüm sütunlardaki verileri rental_rate 0.99 VE replacement_cost 12.99 VEYA 28.99 olma koşullarıyla sıralayınız.
@@ -31,7 +31,7 @@ Film tablosunda bulunan tüm sütunlardaki verileri rental_rate 0.99 VE replacem
 </h3>
 </li><br><br>
 
-
+##
 <h3>
 <li>
 Customer tablosunda bulunan first_name sütunundaki değeri 'Mary' olan müşterinin last_name sütunundaki değeri nedir?
@@ -41,7 +41,7 @@ Customer tablosunda bulunan first_name sütunundaki değeri 'Mary' olan müşter
 </h3>
 </li><br><br>
 
-
+##
 <h3>
 <li>
 Film tablosundaki uzunluğu(length) 50 ten büyük OLMAYIP aynı zamanda rental_rate değeri 2.99 veya 4.99 OLMAYAN verileri sıralayınız.
