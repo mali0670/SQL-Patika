@@ -1,8 +1,8 @@
-<a href='ÖDEV 1'>Ödev 1</a><br>
+<a href='#Ödev 1'>ÖDEV 1</a><br>
 
 
 
-# <p id = 'ÖDEV 1' > Ödev 1 </p>
+# <p id = 'Ödev 1' > ÖDEV 1 </p>
 ## 1. Film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
 
 >### ```SONUÇ: SELECT title, description FROM film```
