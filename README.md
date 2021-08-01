@@ -96,7 +96,7 @@ WHERE country LIKE '_____n'
 
 ~~~sql
 SONUÇ: SELECT title FROM film
-WHERE title ~~* '%t%t%t%t'
+WHERE title ~~* '%t%t%t%t%'
 ~~~
 <br>
 
