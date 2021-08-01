@@ -1,7 +1,8 @@
 # PostgreSQL ödevleri
 
 <a href='#Ödev 1'>ÖDEV 1</a><br>
-<a href='#Ödev 2' >ÖDEV 2</a><br><br><br>
+<a href='#Ödev 2'>ÖDEV 2</a><br>
+<a href='#Ödev 3'>ÖDEV 3</a><br><br><br>
 
 # <p id = 'Ödev 1' > ÖDEV 1 </p>
 
@@ -68,5 +69,40 @@ WHERE first_name IN('Penelope','Nick','Ed')
 ~~~sql
 SONUÇ: SELECT * FROM film
 WHERE rental_rate IN(0.99,2.99,4.99) AND replacement_cost IN(12.99,15.99,28.99)
+~~~
+<br>
+----------------------------------------------------------------------------------------------------
+
+# <p id='Ödev 3'>ÖDEV 3</p>
+
+### 1. Country tablosunda bulunan country sütunundaki ülke isimlerinden 'A' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.
+
+~~~sql
+SONUÇ: SELECT * FROM country
+WHERE country LIKE 'A%a'
+~~~
+<br>
+
+### 2. Country tablosunda bulunan country sütunundaki ülke isimlerinden en az 6 karakterden oluşan ve sonu 'n' karakteri ile sonlananları sıralayınız.
+
+~~~sql
+SONUÇ: SELECT * FROM country
+WHERE country LIKE '_____n'
+~~~
+<br>
+
+### 3. Film tablosunda bulunan title sütunundaki film isimlerinden en az 4 adet büyük ya da küçük harf farketmesizin 'T' karakteri içeren film isimlerini sıralayınız.
+
+~~~sql
+SONUÇ: SELECT title FROM film
+WHERE title ~~* '%t%t%t%t'
+~~~
+<br>
+
+### 4. Film tablosunda bulunan tüm sütunlardaki verilerden title 'C' karakteri ile başlayan ve uzunluğu (length) 90 dan büyük olan ve rental_rate 2.99 olan verileri sıralayınız.
+
+~~~sql
+SONUÇ: SELECT * FROM film
+WHERE title ~~'C%' AND length>90 AND rental_rate=2.99
 ~~~
 <br>
