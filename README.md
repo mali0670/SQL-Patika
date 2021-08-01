@@ -2,7 +2,8 @@
 
 <a href='#Ödev 1'>ÖDEV 1</a><br>
 <a href='#Ödev 2'>ÖDEV 2</a><br>
-<a href='#Ödev 3'>ÖDEV 3</a><br><br><br>
+<a href='#Ödev 3'>ÖDEV 3</a><br>
+<a href='#Ödev 4'>ÖDEV 4</a><br><br><br>
 
 # <p id = 'Ödev 1' > ÖDEV 1 </p>
 
@@ -104,5 +105,47 @@ WHERE title ~~* '%t%t%t%t'
 ~~~sql
 SONUÇ: SELECT * FROM film
 WHERE title ~~'C%' AND length>90 AND rental_rate=2.99
+~~~
+<br>
+
+----------------------------------------------------------------------------------------------------
+
+# <p id='Ödev 4'>ÖDEV 4</p>
+
+### 1. Film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
+
+~~~sql
+SONUÇ: SELECT DISTINCT replacement_cost FROM film
+~~~
+<br>
+
+### 2. Film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır?
+
+~~~sql
+SONUÇ: '21' SELECT COUNT(DISTINCT replacement_cost) FROM film 
+~~~
+<br>
+
+### 3. Film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
+
+~~~sql
+SONUÇ: '9' SELECT COUNT(*) FROM film
+WHERE (title LIKE 'T%') AND (rating='G') 
+~~~
+<br>
+
+### 4. Country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+
+~~~sql
+SONUÇ: '13' SELECT COUNT(*) FROM country
+WHERE country LIKE '_____'
+~~~
+<br>
+
+### 5. City tablosundaki şehir isimlerinin kaçtanesi 'R' veya r karakteri ile biter?
+
+~~~sql
+SONUÇ: '33' SELECT COUNT(*) FROM city
+WHERE city ~~*'%r'
 ~~~
 <br>
