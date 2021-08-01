@@ -1,7 +1,7 @@
 # PostgreSQL ödevleri
 
 <a href='#Ödev 1'>ÖDEV 1</a><br>
-<a href='Ödev 2' >ÖDEV 2</a><br><br><br>
+<a href='#Ödev 2' >ÖDEV 2</a><br><br><br>
 
 # <p id = 'Ödev 1' > ÖDEV 1 </p>
 
