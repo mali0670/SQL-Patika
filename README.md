@@ -3,7 +3,8 @@
 <a href='#Ödev 1'>ÖDEV 1</a><br>
 <a href='#Ödev 2'>ÖDEV 2</a><br>
 <a href='#Ödev 3'>ÖDEV 3</a><br>
-<a href='#Ödev 4'>ÖDEV 4</a><br><br><br>
+<a href='#Ödev 4'>ÖDEV 4</a><br>
+<a href='#Ödev 5'>ÖDEV 5</a><br><br><br>
 
 # <p id = 'Ödev 1' > ÖDEV 1 </p>
 
@@ -18,7 +19,7 @@ SONUÇ: SELECT title, description FROM film
 
 ~~~sql
 SONUÇ: SELECT * FROM film 
-WHERE length>60 AND length<75
+       WHERE length>60 AND length<75
 ~~~
 <br>
 
@@ -26,7 +27,7 @@ WHERE length>60 AND length<75
 
 ~~~sql
 SONUÇ: SELECT * FROM film 
-WHERE rental_rate = 0.99 AND replacement_cost = 12.99 OR replacement_cost = 28.99
+       WHERE rental_rate = 0.99 AND replacement_cost = 12.99 OR replacement_cost = 28.99
 ~~~
 <br>
 
@@ -41,7 +42,7 @@ SONUÇ: Smith
 
 ~~~sql
 SONUÇ: SELECT * FROM film 
-WHERE NOT length>50 AND NOT (rental_rate = 2.99 OR rental_rate = 4.99)
+       WHERE NOT length>50 AND NOT (rental_rate = 2.99 OR rental_rate = 4.99)
 ~~~
 <br>
 ----------------------------------------------------------------------------------------------------
@@ -61,7 +62,7 @@ SONUÇ: SELECT * FROM film
 
 ~~~sql
 SONUÇ: SELECT first_name,last_name FROM actor
-WHERE first_name IN('Penelope','Nick','Ed')
+       WHERE first_name IN('Penelope','Nick','Ed')
 ~~~
 <br>
 
@@ -69,7 +70,7 @@ WHERE first_name IN('Penelope','Nick','Ed')
 
 ~~~sql
 SONUÇ: SELECT * FROM film
-WHERE rental_rate IN(0.99,2.99,4.99) AND replacement_cost IN(12.99,15.99,28.99)
+       WHERE rental_rate IN(0.99,2.99,4.99) AND replacement_cost IN(12.99,15.99,28.99)
 ~~~
 <br>
 ----------------------------------------------------------------------------------------------------
@@ -80,7 +81,7 @@ WHERE rental_rate IN(0.99,2.99,4.99) AND replacement_cost IN(12.99,15.99,28.99)
 
 ~~~sql
 SONUÇ: SELECT * FROM country
-WHERE country LIKE 'A%a'
+       WHERE country LIKE 'A%a'
 ~~~
 <br>
 
@@ -88,7 +89,7 @@ WHERE country LIKE 'A%a'
 
 ~~~sql
 SONUÇ: SELECT * FROM country
-WHERE country LIKE '_____n'
+       WHERE country LIKE '_____n'
 ~~~
 <br>
 
@@ -96,7 +97,7 @@ WHERE country LIKE '_____n'
 
 ~~~sql
 SONUÇ: SELECT title FROM film
-WHERE title ~~* '%t%t%t%t%'
+       WHERE title ~~* '%t%t%t%t%'
 ~~~
 <br>
 
@@ -104,7 +105,7 @@ WHERE title ~~* '%t%t%t%t%'
 
 ~~~sql
 SONUÇ: SELECT * FROM film
-WHERE title ~~'C%' AND length>90 AND rental_rate=2.99
+       WHERE title ~~'C%' AND length>90 AND rental_rate=2.99
 ~~~
 <br>
 
@@ -130,7 +131,7 @@ SONUÇ: '21' SELECT COUNT(DISTINCT replacement_cost) FROM film
 
 ~~~sql
 SONUÇ: '9' SELECT COUNT(*) FROM film
-WHERE (title LIKE 'T%') AND (rating='G') 
+        WHERE (title LIKE 'T%') AND (rating='G') 
 ~~~
 <br>
 
@@ -138,7 +139,7 @@ WHERE (title LIKE 'T%') AND (rating='G')
 
 ~~~sql
 SONUÇ: '13' SELECT COUNT(*) FROM country
-WHERE country LIKE '_____'
+        WHERE country LIKE '_____'
 ~~~
 <br>
 
@@ -146,6 +147,41 @@ WHERE country LIKE '_____'
 
 ~~~sql
 SONUÇ: '33' SELECT COUNT(*) FROM city
-WHERE city ~~*'%r'
+        WHERE city ~~*'%r'
+~~~
+<br>
+
+----------------------------------------------------------------------------------------------------
+
+# <p id='Ödev 4'>ÖDEV 4</p>
+
+### 1. Film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
+
+~~~sql
+SONUÇ: SELECT title, length FROM film
+       WHERE title LIKE '%n'
+       ORDER BY length DESC
+       LIMIT 5
+~~~
+<br>
+
+### 2. Film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en kısa (length) ikinci 5 filmi sıralayınız.
+
+~~~sql
+SONUÇ: SELECT title, length FROM film
+       WHERE title LIKE '%n'
+       ORDER BY length ASC
+       OFFSET 5
+       LIMIT 5
+~~~
+<br>
+
+### 3. Customer tablosunda bulunan last_name sütununa göre azalan yapılan sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
+
+~~~sql
+SONUÇ: SELECT * FROM customer
+       WHERE store_id = 1
+       ORDER BY last_name DESC 
+       LIMIT 4
 ~~~
 <br>
