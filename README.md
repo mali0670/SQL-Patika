@@ -4,7 +4,8 @@
 <a href='#Ödev 2'>ÖDEV 2</a><br>
 <a href='#Ödev 3'>ÖDEV 3</a><br>
 <a href='#Ödev 4'>ÖDEV 4</a><br>
-<a href='#Ödev 5'>ÖDEV 5</a><br><br><br>
+<a href='#Ödev 5'>ÖDEV 5</a><br>
+<a href='#Ödev 6'>ÖDEV 6</a><br><br><br>
 
 # <p id = 'Ödev 1' > ÖDEV 1 </p>
 
@@ -183,5 +184,40 @@ SONUÇ: SELECT * FROM customer
        WHERE store_id = 1
        ORDER BY last_name DESC 
        LIMIT 4
+~~~
+<br>
+
+----------------------------------------------------------------------------------------------------
+
+# <p id='Ödev 6'>ÖDEV 6</p>
+
+### 1. Film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
+
+~~~sql
+SONUÇ: SELECT AVG(rental_rate) FROM film
+~~~
+<br>
+
+### 2. Film tablosunda bulunan filmlerden kaçtanesi 'C' karekteri ile başlar?
+
+~~~sql
+SONUÇ: SELECT COUNT(*) FROM film
+       WHERE title LIKE 'C%'
+~~~
+<br>
+
+### 3. Film tablosunda bulunan filmlerden rental_rate değeri 0.99 a eşit olan en uzun (length) film kaç dakikadır?
+
+~~~sql
+SONUÇ: SELECT MAX(length) FROM film
+       WHERE rental_rate = 0.99
+~~~
+<br>
+
+### 4. Film tablosunda bulunan filmlerden rental_rate değeri 0.99 a eşit olan en uzun (length) film kaç dakikadır?
+
+~~~sql
+SONUÇ: SELECT COUNT(DISTINCT(replacement_cost)) FROM film
+       WHERE length>150
 ~~~
 <br>
