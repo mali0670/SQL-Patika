@@ -7,7 +7,8 @@
 <a href='#Ödev 5'>ÖDEV 5</a><br>
 <a href='#Ödev 6'>ÖDEV 6</a><br>
 <a href='#Ödev 7'>ÖDEV 7</a><br>
-<a href='#Ödev 8'>ÖDEV 8</a><br><br><br>
+<a href='#Ödev 8'>ÖDEV 8</a><br>
+<a href='#Ödev 9'>ÖDEV 9</a><br><br><br>
 
 # <p id = 'Ödev 1' > ÖDEV 1 </p>
 
@@ -382,5 +383,34 @@ SONUÇ: DELETE FROM employee
 
        DELETE FROM employee
        WHERE id< 12;
+~~~
+<br>
+
+----------------------------------------------------------------------------------------------------
+
+# <p id='Ödev 9'>ÖDEV 9</p>
+
+### 1. City tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+~~~sql
+SONUÇ: SELECT city, country FROM city
+INNER JOIN country ON  city.country_id =      country.country_id
+~~~
+<br>
+
+### 2. Customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+~~~sql
+SONUÇ: SELECT payment.payment_id, customer.first_name, customer.last_name FROM payment
+INNER JOIN customer ON  customer.customer_id = payment.customer_id
+~~~
+<br>
+
+### 3. Customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+
+~~~sql
+SONUÇ: SELECT rental_id, first_name, last_name FROM rental
+INNER JOIN customer ON  customer.customer_id = rental.customer_id
 ~~~
 <br>
