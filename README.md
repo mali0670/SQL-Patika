@@ -9,7 +9,8 @@
 <a href='#Ödev 7'>ÖDEV 7</a><br>
 <a href='#Ödev 8'>ÖDEV 8</a><br>
 <a href='#Ödev 9'>ÖDEV 9</a><br>
-<a href='#Ödev 10'>ÖDEV 10</a><br><br><br>
+<a href='#Ödev 10'>ÖDEV 10</a><br>
+<a href='#Ödev 11'>ÖDEV 11</a><br><br><br>
 
 # <p id = 'Ödev 1' > ÖDEV 1 </p>
 
@@ -409,7 +410,6 @@ INNER JOIN customer ON  customer.customer_id = payment.customer_id
 
 ### 3. Customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
 
-
 ~~~sql
 SONUÇ: SELECT rental_id, first_name, last_name FROM rental
 INNER JOIN customer ON  customer.customer_id = rental.customer_id
@@ -438,9 +438,56 @@ SONUÇ: SELECT payment.payment_id,customer.first_name, customer.last_name FROM p
 
 ### 3. Customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
 
-
 ~~~sql
 SONUÇ: SELECT rental.rental_id, customer.first_name, customer.last_name FROM rental
        FULL JOIN customer ON customer.customer_id = rental.customer_id
+~~~
+<br>
+
+----------------------------------------------------------------------------------------------------
+
+# <p id='Ödev 11'>ÖDEV 11</p>
+
+### 1. Actor ve customer tablolarında bulunan first_name sütunları için tüm verileri sıralayalım.
+
+~~~sql
+SONUÇ: (SELECT first_name FROM actor)
+       UNION
+       (SELECT first_name FROM customer)
+~~~
+<br>
+
+### 2. actor ve customer tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.
+
+~~~sql
+SONUÇ: (SELECT first_name FROM actor)
+       INTERSECT
+       (SELECT first_name FROM customer)
+~~~
+<br>
+
+### 3. Actor ve customer tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+
+~~~sql
+SONUÇ: (SELECT first_name FROM actor)
+       EXCEPT
+       (SELECT first_name FROM customer)
+~~~
+<br>
+
+### 4. İlk 3 sorguyu tekrar eden veriler için de yapalım.
+
+~~~sql
+SONUÇ: (SELECT first_name FROM actor)
+       UNION ALL
+       (SELECT first_name FROM customer)
+
+       (SELECT first_name FROM actor)
+       INTERSECT ALL
+       (SELECT first_name FROM customer)
+
+       (SELECT first_name FROM actor)
+       EXCEPT ALL
+       (SELECT first_name FROM customer)
 ~~~
 <br>
